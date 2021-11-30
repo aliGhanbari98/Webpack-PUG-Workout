@@ -1,0 +1,51 @@
+@import '../utils/vars.scss';
+
+.header-container {
+	background-color: $primary-color;
+	display: flex;
+	padding: 30px;
+	.header-logo {
+		width: 300px;
+		margin-top: 10px;
+	}
+
+	@media screen and (max-width: $tableWidth) {
+		padding: 20px;
+	}
+	@media screen and (max-width: $phoneWidth) {
+		padding: 15px;
+	}
+}
+
+@keyframes Beat {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(0.97);
+	}
+	35% {
+		transform: scale(0.9);
+	}
+	45% {
+		transform: scale(1.1);
+	}
+	55% {
+		transform: scale(0.9);
+	}
+	65% {
+		transform: scale(1.1);
+	}
+	75% {
+		transform: scale(1.03);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.header-container > .header-logo {
+	animation-name: Beat;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
